@@ -1,0 +1,15 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Prosto One", sans-serif;
+  --content-width: 1830px;
+  --container-offset: 0px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white: #fff;
+  --black: #000;
+  --cs-red: #F32626;
+  --cs-dark: #12151F;
+}
