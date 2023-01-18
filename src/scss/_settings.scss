@@ -9,11 +9,11 @@ html {
 }
 
 body {
-    font-family: var(--font-family, sans-serif);
+    font-family: var(--font-family);
     font-size: 16px;
     line-height: 19px;
-    background-color: var(--cs-body-bg);
-    color: var(--cs-light);
+    background-color: var(--white);
+    color: var(--cs-grey);
     overflow-x: hidden;
 }
 
@@ -74,7 +74,7 @@ a {
     margin: 0 auto;
     padding: 0 var(--container-offset);
     max-width: var(--container-width);
-    width: 95%;
+    width: 100%;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -100,7 +100,7 @@ a {
 }
 
 ::-webkit-scrollbar {width: 6px;height: 6px;}
-::-webkit-scrollbar-track-piece {background:var(--cs-white);}
+::-webkit-scrollbar-track-piece {background:var(--white);}
 ::-webkit-scrollbar-thumb:vertical {
   height:6px;background:var(--cs-red);-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 10px;

@@ -1,3 +1,123 @@
-@include mobile {
+@include big-desktop {
+    .header {
+        .nav {
+            margin-right: 30px;
 
+            ul {
+                &:first-child {
+                    a {
+                        padding: 8px 22px;
+                    }
+
+                    .nav-child {
+                        a {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .header {
+        .nav {
+            margin-right: 5px;
+
+            ul {
+                &:first-child {
+                    a {
+                        padding: 8px 12px;
+                    }
+                }
+            }
+        }
+        .languages {
+            margin-right: 10px;
+        }
+        &__links-group {
+            gap: 7px;
+        }
+    }
+}
+
+@include middle-tablet {
+    .header {
+        &__container {
+            flex-wrap: wrap;
+        }
+        .nav {
+            width: 100%;
+            margin-top: 10px;
+            order: 1;
+        }
+        ul {
+            &:first-child {
+                .nav-child {
+                    min-width: 250px;
+
+                    li {
+                        padding: 9px 15px;
+                        padding-bottom: 7px;
+                    }
+
+                    .nav-child {
+                        min-width: 200px;
+                        padding: 30px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 15px;
+
+        .burger {
+            display: flex;
+        }
+
+        &__container {
+            flex-wrap: nowrap;
+        }
+
+        .logo {
+            margin-right: 15px;
+        }
+
+        .nav,
+        &__links-group {
+            display: none;
+        }
+        &__links-group {
+            .btn-main {
+                padding: 11px 5px;
+            }
+        }
+        &__right {
+            justify-content: flex-end;
+            width: inherit;
+            max-width: inherit;
+            margin-left: auto;
+            margin-right: 15px;
+        }
+        .mobile-menu {
+            display: block;
+
+            .header__links-group {
+                display: flex;
+                align-items: center;
+
+                .btn-main {
+                    max-width: inherit;
+                }
+            }
+        }
+    }
 }
