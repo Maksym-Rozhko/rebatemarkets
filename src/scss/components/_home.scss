@@ -78,3 +78,62 @@
         }
     }
 }
+
+.main-slider {
+    &__controls {
+        position: static;
+        display: flex;
+        margin-top: 90px;
+
+        .swiper-pagination-bullet {
+            width: 28px;
+            height: 2px;
+            background: #303039;
+            opacity: 1;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: var(--white);
+                border-radius: 30px 0px 0px 30px;
+                width: 0px;
+                height: 2px;
+                left: 0;
+            }
+
+            &-active {
+                &::after {
+                    width: 100%;
+                    animation: runSlideBg 6s ease-in-out forwards;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 0 transparent;
+        transition: all ease-in-out .4s;
+
+        &::after {
+            color: var(--cs-dark-text);
+            font-size: 15px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px var(--cs-dark-text);
+        }
+
+        &.swiper-button-prev {
+            left: 45px;
+        }
+        &.swiper-button-next {
+            right: 45px;
+        }
+    }
+}

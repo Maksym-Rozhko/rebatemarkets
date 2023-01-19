@@ -1,3 +1,89 @@
+@include small-desktop {
+    .main-screen {
+        .title {
+            font-size: 60px;
+        }
+    }
+}
+
+@include middle-tablet {
+    .main-screen {
+        padding-top: 200px;
+        padding-bottom: 118px;
+
+        &__container {
+            max-width: 700px;
+            padding: 0 50px;
+        }
+
+        .text {
+            margin-bottom: 20px;
+        }
+    }
+    .main-slider {
+        &__controls {
+            margin-top: 50px;
+        }
+        &__btn {
+            &.swiper-button-prev {
+                left: 10px;
+            }
+            &.swiper-button-next {
+                right: 10px;
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .main-screen {
+        .title {
+            font-size: 40px;
+        }
+        &__container {
+            max-width: 500px;
+            padding: 0 50px;
+        }
+    }
+    .main-slider {
+        &__btn {
+            top: inherit;
+            bottom: 50px;
+
+            &.swiper-button-prev {
+                left: 45px;
+            }
+            &.swiper-button-next {
+                right: inherit;
+                left: 110px;
+            }
+        }
+    }
+}
+
 @include mobile {
-    
+    .main-screen {
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+        .title {
+            max-width: 300px;
+            font-size: 30px;
+        }
+        &__container {
+            padding: 0 15px;
+        }
+    }
+    .main-slider {
+        &__btn {
+            bottom: 70px;
+
+            &.swiper-button-prev {
+                left: 15px;
+            }
+            &.swiper-button-next {
+                left: 75px;
+            }
+        }
+    }
 }

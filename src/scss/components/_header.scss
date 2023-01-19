@@ -109,6 +109,25 @@
                         border-bottom: 1px solid transparent;
                         color: var(--cs-light-grey);
                     }
+
+                    &.parent a {
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 5px;
+                            height: 5px;
+                            border-width: 1px 0 0 1px;
+                            border-style: solid;
+                            border-color: var(--cs-dark-text);
+                            top: calc(50% + 0px);
+                            right: 0;
+                            transform: rotate(125deg);
+                            transform-origin: top;
+                            transition: .4s ease-in-out;
+                        }
+                    }
                 }
 
                 li:not(:last-child) a {
@@ -179,6 +198,10 @@
                             &:hover {
                                 background-color: transparent;
                                 color: var(--cs-red);
+                            }
+
+                            &::before {
+                                content: none;
                             }
                         }
 
@@ -271,7 +294,3 @@
         }
     }
 }
-
-// .header.active-scroll {
-//     background-color: var(--cs-dark);
-// }
