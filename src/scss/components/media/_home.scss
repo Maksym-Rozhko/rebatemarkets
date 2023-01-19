@@ -45,6 +45,13 @@
             flex-direction: column;
         }
     }
+    .banner {
+        padding-top: 150px;
+
+        &__image {
+            min-height: 67px;
+        }
+    }
 }
 
 @include small-tablet {
@@ -126,6 +133,9 @@
                 max-width: 120px;
             }
         }
+    }
+    .banner {
+        padding-top: 130px;
     }
 }
 

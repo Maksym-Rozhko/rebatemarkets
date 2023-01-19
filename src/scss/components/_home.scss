@@ -235,3 +235,16 @@
         }
     }
 }
+
+.banner {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    &__image {
+        display: block;
+        animation: scrollRunning 10s infinite linear;
+    }
+}
