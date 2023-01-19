@@ -4,6 +4,11 @@
             font-size: 60px;
         }
     }
+    .registration {
+        &__container {
+            padding: 40px 120px;
+        }
+    }
 }
 
 @include middle-tablet {
@@ -33,6 +38,13 @@
             }
         }
     }
+    .registration {
+        bottom: -140px;
+
+        &__container {
+            flex-direction: column;
+        }
+    }
 }
 
 @include small-tablet {
@@ -57,6 +69,13 @@
                 right: inherit;
                 left: 110px;
             }
+        }
+    }
+    .registration {
+        bottom: -170px;
+
+        &__container {
+            padding: 30px;
         }
     }
 }
@@ -84,6 +103,41 @@
             &.swiper-button-next {
                 left: 75px;
             }
+        }
+    }
+    .registration {
+        bottom: -130px;
+
+        &__container {
+            padding: 30px 15px;
+        }
+
+        .subtitle {
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 28px;
+        }
+        .form {
+            input {
+                padding: 17px 140px 17px 20px;
+            }
+            .btn-main {
+                max-width: 120px;
+            }
+        }
+    }
+}
+
+@include small-mobile {
+    .registration {
+        bottom: -130px;
+
+        .subtitle {
+            font-size: 16px;
+        }
+        .title {
+            font-size: 22px;
         }
     }
 }

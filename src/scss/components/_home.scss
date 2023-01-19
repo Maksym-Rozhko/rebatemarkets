@@ -1,3 +1,7 @@
+.main-screen-large {
+    position: relative;
+}
+
 .main-screen {
     background-repeat: no-repeat;
     background-position: center;
@@ -134,6 +138,100 @@
         }
         &.swiper-button-next {
             right: 45px;
+        }
+    }
+}
+
+.registration {
+    position: absolute;
+    width: 100%;
+    bottom: -100px;
+    z-index: 1;
+
+    &__container {
+        background: #F8F8F8;
+        box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 61px 237px;
+        @include flex-all-sb;
+        gap: 20px;
+    }
+
+    .subtitle {
+        font-family: 'Anonymous Pro', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        color: var(--cs-grey);
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding-left: 15px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--cs-red);
+            left: 0;
+            top: calc(50% - 3px);
+        }
+    }
+
+    .title {
+        font-family: 'Prosto One', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        color: var(--cs-dark);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__form {
+        max-width: 668px;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .form {
+        background: #FFFFFF;
+        border-radius: 4px;
+        position: relative;
+
+        input {
+            border: none;
+            width: 100%;
+            padding: 17px 220px 17px 20px;
+            font-family: 'Muller', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 100%;
+            color: var(--cs-dark);
+            outline-color: var(--cs-red);
+
+            &::placeholder {
+                color: var(--cs-dark-text);
+            }
+        }
+
+        .btn-main {
+            @include btn-main;
+            padding: 15px;
+            position: absolute;
+            max-width: 200px;
+            top: 0;
+            right: 0;
+
+            &--red {
+                @include btn-red;
+            }
         }
     }
 }
