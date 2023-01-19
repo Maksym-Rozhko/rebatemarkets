@@ -9,6 +9,23 @@
             padding: 40px 120px;
         }
     }
+    .brokers {
+        .tabs {
+            &__nav {
+                gap: 30px;
+            }
+        }
+        .broker {
+            &__info {
+                margin-left: 20px;
+                margin-right: 20px;
+
+                &-bottom {
+                    gap: 20px;
+                }
+            }
+        }
+    }
 }
 
 @include middle-tablet {
@@ -52,6 +69,13 @@
             min-height: 67px;
         }
     }
+    .brokers {
+        .tabs {
+            &__nav-btn {
+                font-size: 30px;
+            }
+        }
+    }
 }
 
 @include small-tablet {
@@ -83,6 +107,35 @@
 
         &__container {
             padding: 30px;
+        }
+    }
+    .banner {
+        padding-bottom: 20px;
+    }
+    .brokers {
+        padding: 40px 0;
+        .tabs {
+            &__nav {
+                gap: 20px;
+            }
+            &__nav-btn {
+                font-size: 24px;
+            }
+        }
+        .broker {
+            flex-wrap: wrap;
+
+            &__info {
+                max-width: inherit;
+                order: 1;
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 20px;
+
+                &-bottom {
+                    gap: 50px;
+                }
+            }
         }
     }
 }
@@ -137,6 +190,32 @@
     .banner {
         padding-top: 130px;
     }
+    .brokers {
+        .tabs {
+            &__nav {
+                flex-wrap: wrap;
+            }
+            &__nav-btn {
+                font-size: 22px;
+
+                &::after {
+                    max-width: 58px;
+                }
+            }
+        }
+        &__list {
+            padding-right: 15px;
+        }
+        .broker {
+            padding: 15px;
+
+            &__info {
+                &-bottom {
+                    gap: 20px;
+                }
+            }
+        }
+    }
 }
 
 @include small-mobile {
@@ -148,6 +227,32 @@
         }
         .title {
             font-size: 22px;
+        }
+    }
+    .brokers {
+        .broker {
+            &__image-wrap {
+                max-width: 85px;
+                max-height: 85px;
+            }
+            &__info {
+                &-top {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                }
+                &-bottom {
+                    gap: 10px;
+                }
+            }
+            &__links {
+                gap: 5px;
+            }
+            &__title {
+                margin-bottom: 5px;
+                margin-right: 0;
+            }
         }
     }
 }

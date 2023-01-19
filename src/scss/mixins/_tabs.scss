@@ -1,13 +1,54 @@
 @mixin tabs {
-  .tabs__nav-btn--active {
-    background-color: #ff0001;
-  }
+    .tabs {
+        &__nav {
+            @include flex-all-center;
+            gap: 60px;
+        }
+        &__nav-item {
+            &:focus-visible {
+                outline: none;
+            }
+        }
 
-  .tabs__panel {
-    display: none;
-  }
+        &__nav-btn {
+            @include title;
+            @include lines;
+            padding-bottom: 10px;
+            color: rgba(46, 47, 53, 0.15);
+            outline-color: transparent;
+            transition: color ease-in-out .4s;
 
-  .tabs__panel--active {
-    display: block;
-  }
+            &::before,
+            &::after {
+                width: 0;
+                transition: all ease-in-out .4s;
+            }
+
+            &:hover {
+                color: var(--cs-grey);
+            }
+
+            &:focus {
+                color: var(--cs-grey);
+                background-color: transparent;
+            }
+        }
+    }
+
+    .tabs__nav-btn--active {
+        color: var(--cs-grey);
+
+        &::before,
+        &::after {
+            width: 100%;
+        }
+    }
+
+    .tabs__panel {
+        display: none;
+    }
+
+    .tabs__panel--active {
+        display: block;
+    }
 }
