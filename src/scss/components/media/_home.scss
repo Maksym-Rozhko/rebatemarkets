@@ -59,6 +59,14 @@
             }
         }
     }
+    .payments {
+        padding: 25px 0;
+
+        &__container {
+            @include flex-all-center;
+            gap: 15px;
+        }
+    }
 }
 
 @include middle-tablet {
@@ -121,6 +129,11 @@
             .slide {
                 margin: 0 auto;
             }
+        }
+    }
+    .payments {
+        &__container {
+            flex-wrap: wrap;
         }
     }
 }
@@ -310,6 +323,15 @@
                     right: 0;
                 }
             }
+        }
+    }
+    .payments {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        &__wrapper {
+            margin: 0 auto;
         }
     }
 }

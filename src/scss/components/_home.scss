@@ -577,3 +577,12 @@
         }
     }
 }
+
+.payments {
+    padding: 50px 0;
+
+    &__container {
+        @include flex-all-center;
+        gap: 30px;
+    }
+}
