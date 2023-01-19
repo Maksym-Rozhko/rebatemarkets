@@ -1,3 +1,11 @@
+@include big-desktop {
+    .opporunity {
+        &__container {
+            padding: 0 150px;
+        }
+    }
+}
+
 @include small-desktop {
     .main-screen {
         .title {
@@ -76,6 +84,13 @@
             }
         }
     }
+    .opporunity {
+        padding: 100px 0;
+
+        &__container {
+            padding: 0 50px;
+        }
+    }
 }
 
 @include small-tablet {
@@ -136,6 +151,15 @@
                     gap: 50px;
                 }
             }
+        }
+    }
+    .opporunity {
+        &__container {
+            padding: 0 15px;
+        }
+
+        .title {
+            font-size: 30px;
         }
     }
 }
@@ -214,6 +238,13 @@
                     gap: 20px;
                 }
             }
+        }
+    }
+    .opporunity {
+        padding: 50px 0;
+
+        .title {
+            font-size: 24px;
         }
     }
 }
