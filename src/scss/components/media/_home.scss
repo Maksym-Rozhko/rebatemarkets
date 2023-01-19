@@ -4,6 +4,22 @@
             padding: 0 150px;
         }
     }
+    .education {
+        &__container {
+            padding: 0 100px;
+            max-width: inherit;
+        }
+        .education__slider {
+            &-btn {
+                &.swiper-button-prev {
+                    left: 15px;
+                }
+                &.swiper-button-next {
+                    right: 15px;
+                }
+            }
+        }
+    }
 }
 
 @include small-desktop {
@@ -30,6 +46,15 @@
 
                 &-bottom {
                     gap: 20px;
+                }
+            }
+        }
+    }
+    .education {
+        .education__slider {
+            .slide {
+                &__content {
+                    padding: 25px;
                 }
             }
         }
@@ -89,6 +114,13 @@
 
         &__container {
             padding: 0 50px;
+        }
+    }
+    .education {
+        .education__slider {
+            .slide {
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -156,6 +188,22 @@
     .opporunity {
         &__container {
             padding: 0 15px;
+        }
+
+        .title {
+            font-size: 30px;
+        }
+    }
+    .education {
+        padding: 50px 0;
+
+        &__container {
+            padding: 0;
+        }
+
+        &__top {
+            margin-top: 25px;
+            flex-wrap: wrap;
         }
 
         .title {
@@ -245,6 +293,23 @@
 
         .title {
             font-size: 24px;
+        }
+    }
+    .education {
+        .title {
+            font-size: 24px;
+        }
+        .education__slider {
+            &-btn {
+                top: 40%;
+
+                &.swiper-button-prev {
+                    left: 0;
+                }
+                &.swiper-button-next {
+                    right: 0;
+                }
+            }
         }
     }
 }
