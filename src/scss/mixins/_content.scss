@@ -182,19 +182,21 @@
 @mixin socials {
     .socials {
         .list {
-            gap: 10px;
+            @include flex-all-center;
+            gap: 13px;
 
             &__link {
-                background: rgba(234, 235, 240, .05);
-                border-radius: 4px;
                 @include flex-all-center;
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
                 width: 35px;
                 height: 35px;
+                border-radius: 50%;
 
                 .icon {
                     width: 15px;
                     height: 15px;
-                    fill: var(--cs-grey-text);
+                    fill: var(--white);
                     transition: all ease-in-out .4s;
                 }
 
@@ -208,7 +210,8 @@
                     .icon.youtube {
                         fill: #FF0000;
                     }
-                    .icon.twitter {
+                    .icon.twitter,
+                    .icon.linkedin {
                         fill: #1DA1F2;
                     }
                     .icon.instagram {

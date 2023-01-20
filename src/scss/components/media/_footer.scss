@@ -1,3 +1,41 @@
-@include mobile {
+@include small-desktop {
+    .footer {
+        &__links {
+            a {
+                &:not(:last-child) {
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+}
 
+@include tablet {
+    .footer {
+        &__container {
+            flex-wrap: wrap;
+            gap: 25px 220px;
+        }
+        .copyright {
+            order: 1;
+        }
+    }
+}
+
+@include small-tablet {
+    .footer {
+        &__container {
+            flex-wrap: wrap;
+            gap: 25px 110px;
+        }
+    }
+}
+
+@include mobile {
+    .footer {
+        &__container {
+            gap: 25px;
+            flex-direction: column;
+        }
+    }
 }
