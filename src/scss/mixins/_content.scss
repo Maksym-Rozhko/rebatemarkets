@@ -225,3 +225,79 @@
         }
     }
 }
+
+@mixin main-banner {
+    padding-top: 140px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin breadcrumbs {
+    @include flex-all-center;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-bottom: 15px;
+    max-width: fit-content;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--cs-light-grey);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 4px;
+        background-color: var(--cs-red);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    a {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        color: var(--cs-light-grey);
+        transition: color ease-in-out .4s;
+
+        &:hover {
+            color: var(--cs-red);
+        }
+    }
+
+    .divider {
+        position: relative;
+        margin: 0 10px;
+
+        &::before {
+            position: absolute;
+            content: "/";
+            font-size: 14px;
+            line-height: 140%;
+            color: var(--cs-light-grey);
+            top: calc(50% - 9px);
+            right: -2px;
+        }
+    }
+}
+
+.main-banner {
+    @include main-banner;
+
+    &__title {
+        @include title;
+        margin-bottom: 17px;
+        color: var(--white);
+    }
+
+    .breadcrumb {
+        @include breadcrumbs;
+    }
+}

@@ -1,0 +1,30 @@
+@include small-tablet {
+    .catalog {
+        .catalog-search {
+            .search-controlls {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .main-banner {
+        &__title {
+            font-size: 30px;
+        }
+    }
+    .catalog {
+        .catalog-search {
+            .search-controlls {
+                gap: 10px;
+
+                label,
+                select,
+                .btn-main {
+                    max-width: inherit;
+                }
+            }
+        }
+    }
+}

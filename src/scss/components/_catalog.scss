@@ -1,0 +1,83 @@
+.catalog {
+    .main-banner {
+        background-image: url('../images/banners/1.jpg');
+    }
+
+    .brokers {
+        &__list {
+            max-height: inherit;
+        }
+    }
+
+    .catalog-search {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        border-bottom: 1px solid #F5F5F5;
+
+        .search-controlls {
+            @include flex-all-center;
+            gap: 20px;
+            max-width: 980px;
+            margin: 0 auto;
+
+            label {
+                max-width: 480px;
+                width: 100%;
+
+                input {
+                    background: #F8F8F8;
+                    border-radius: 4px;
+                    border: none;
+                    padding: 17px 20px;
+                    width: 100%;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 100%;
+                    color: var(--cs-dark-text);
+                    outline-color: var(--cs-red);
+
+                    &::-webkit-search-cancel-button {
+                        cursor: pointer;
+                    }
+
+                    &::placeholder {
+                        color: var(--cs-dark-text);
+                    }
+                }
+            }
+
+            select {
+                background-color: #F8F8F8;
+                border-radius: 4px;
+                border: none;
+                padding: 17px 20px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 100%;
+                color: var(--cs-dark-text);
+                max-width: 260px;
+                width: 100%;
+                appearance: none;
+                background-image: url('../images/icon/select-arrow.svg');
+                background-repeat: no-repeat;
+                background-position: center right 20px;
+                background-size: auto;
+                outline-color: var(--cs-red);
+                cursor: pointer;
+            }
+
+            .btn-main {
+                @include btn-main;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                padding: 17px;
+                max-width: 200px;
+
+                &--red {
+                    @include btn-red;
+                }
+            }
+        }
+    }
+}
