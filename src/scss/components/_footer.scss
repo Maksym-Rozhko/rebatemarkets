@@ -62,3 +62,26 @@
         }
     }
 }
+
+.scroll-top {
+    width: 53px;
+    height: 53px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 11;
+    bottom: 58px;
+    right: 45px;
+    @include flex-all-center;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+
+    .icon {
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        background: var(--cs-red);
+    }
+}

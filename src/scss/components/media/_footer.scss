@@ -20,6 +20,9 @@
             order: 1;
         }
     }
+    .scroll-top {
+        bottom: 120px;
+    }
 }
 
 @include small-tablet {
@@ -37,5 +40,8 @@
             gap: 25px;
             flex-direction: column;
         }
+    }
+    .scroll-top {
+        bottom: 58px;
     }
 }
