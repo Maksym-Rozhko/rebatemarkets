@@ -1,0 +1,261 @@
+.blog-page {
+    .main-banner {
+        background-image: url('../images/banners/4.jpg');
+    }
+
+    .blog {
+        padding-top: 100px;
+        padding-bottom: 120px;
+
+        &__container {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding-bottom: 40px;
+            border-bottom: 1px solid #ECECEC;
+            h2 {
+                @include title;
+                @include lines;
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+
+            p {
+                font-family: 'Muller', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 150%;
+                color: var(--cs-grey);
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+
+            .date {
+                font-family: 'Muller';
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 150%;
+                color: var(--cs-dark);
+                text-align: right;
+            }
+        }
+
+        .comments {
+            margin-top: 60px;
+
+            &__top {
+                @include flex-all-sb;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin-bottom: 32px;
+
+                h4 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                    color: #0E0E13;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-left: 60px;
+                }
+            }
+
+            .socials {
+                ul {
+                    @include flex-all-center;
+                    gap: 15px;
+
+                    a {
+                        @include flex-all-center;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        backdrop-filter: blur(10px);
+                        box-shadow: 0 0 15px transparent;
+                        transition: all ease-in-out .4s;
+
+                        svg {
+                            width: 15px;
+                            height: 15px;
+                            fill: var(--white);
+                        }
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+
+                        &.fb {
+                            background-color: #5585E2;
+
+                            &:hover {
+                                box-shadow: 0 0 15px #5585E2;
+                            }
+                        }
+                        &.tw {
+                            background-color: #3CBDF4;
+
+                            &:hover {
+                                box-shadow: 0 0 15px #3CBDF4;
+                            }
+                        }
+                        &.ml {
+                            background-color: var(--cs-red);
+
+                            &:hover {
+                                box-shadow: 0 0 15px var(--cs-red);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__form {
+                padding: 60px;
+                background: var(--white);
+                box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+
+                .form {
+                    display: flex;
+                    justify-content: space-between;
+
+                    &__left {
+                        margin-right: 204px;
+                        min-width: 336px
+                    }
+
+                    &__subtitle {
+                        @include subtitle;
+                    }
+
+                    &__title {
+                        @include title;
+                    }
+
+                    &__right {
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                    }
+
+                    &__control {
+                        background: #F8F8F8;
+                        border-radius: 4px;
+                        padding: 17px 20px;
+                        font-family: 'Muller', sans-serif;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 100%;
+                        border: none;
+                        outline-color: var(--cs-red);
+                        margin-bottom: 10px;
+                        color: var(--cs-dark);
+
+                        &::placeholder {
+                            color: var(--cs-dark-text)
+                        };
+                    }
+
+                    textarea {
+                        min-height: 110px;
+                        resize: none;
+                    }
+
+                    &__controls {
+                        @include flex-v-center;
+                        gap: 40px;
+                        margin-top: 40px;
+
+                        .btn-main {
+                            @include btn-main;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 15px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            padding: 17px;
+                            max-width: 200px;
+
+                            &--red {
+                                @include btn-red;
+                            }
+                        }
+
+                        .group {
+                            span {
+                                font-family: 'Muller', sans-serif;
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 14px;
+                                line-height: 100%;
+                                display: block;
+                                margin-bottom: 11px;
+                                color: var(--cs-dark-text);
+
+                                a {
+                                    color: var(--cs-dark-text);
+                                    padding-bottom: 1px;
+                                    position: relative;
+
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        border-bottom: 1px solid var(--cs-dark-text);
+                                        bottom: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 1px;
+                                    }
+                                }
+                            }
+
+                            .custom-checkbox {
+                                @include custom-checkbox;
+                                @include flex-v-center;
+
+                                &__content {
+                                    font-family: 'Muller', sans-serif;
+                                    font-style: normal;
+                                    font-weight: 300;
+                                    font-size: 14px;
+                                    line-height: 100%;
+                                    color: var(--cs-dark-text);
+                                    padding-left: 23px;
+
+                                    &::before {
+                                        border: none;
+                                        border: 1px solid #D3D3D3;
+                                        border-radius: 4px;
+                                        outline-color: transparent;
+                                    }
+
+                                    &::after {
+                                        filter: invert(1);
+                                        background-size: 8px 8px;
+                                    }
+                                }
+
+                                &__field:checked + .custom-checkbox__content {
+                                    &::before {
+                                        border: 1px solid ar(--cs-green);
+                                        background-color: var(--cs-green);
+                                    }
+                                }
+                                &__field:checked + .custom-checkbox__content {
+                                    &::after {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

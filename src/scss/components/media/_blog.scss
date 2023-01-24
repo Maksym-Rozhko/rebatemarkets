@@ -1,0 +1,143 @@
+@include small-desktop {
+    .blog-page {
+        .blog {
+            .comments {
+                &__form {
+                    .form {
+                        &__left {
+                            margin-right: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include middle-tablet {
+    .blog-page {
+        .blog {
+            .comments {
+                &__top {
+                    h4 {
+                        margin-left: 0;
+                    }
+                }
+
+                &__form {
+                    padding: 30px;
+
+                    .form {
+                        flex-wrap: wrap;
+                        gap: 20px;
+
+                        &__left {
+                            min-width: inherit;
+                            margin-right: 0;
+                        }
+
+                        &__title {
+                            font-size: 30px;
+                        }
+
+                        &__controls {
+                            gap: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .blog-page {
+        .main-banner {
+            &__title {
+                font-size: 30px;
+            }
+        }
+        .blog {
+            padding-top: 50px;
+            padding-bottom: 70px;
+
+            .content {
+                h2 {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
+                p {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+@include mobile {
+    .blog-page {
+        .main-banner {
+            &__title {
+                font-size: 30px;
+            }
+        }
+        .blog {
+            .content {
+                h2 {
+                    font-size: 20px;
+                }
+                p {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+            }
+            .comments {
+                &__form {
+                    padding: 30px 15px;
+
+                    .form {
+                        &__controls {
+                            .btn-main {
+                                max-width: 140px;
+                            }
+
+                            .group {
+                                span {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small-mobile {
+    .blog-page {
+        .blog {
+            .comments {
+                &__form {
+
+                    .form {
+                        &__controls {
+                            flex-direction: column-reverse;
+                            .btn-main {
+                                max-width: inherit;
+                            }
+
+                            .group {
+                                span {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
