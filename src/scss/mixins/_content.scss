@@ -235,7 +235,9 @@
 }
 
 @mixin breadcrumbs {
+    font-family: 'Muller', sans-serif;
     @include flex-all-center;
+    flex-wrap: wrap;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;

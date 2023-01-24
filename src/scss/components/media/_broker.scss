@@ -1,0 +1,270 @@
+@include big-desktop {
+    .broker-page {
+        .broker {
+            &__container {
+                gap: 40px;
+            }
+        }
+    }
+}
+
+@include small-desktop {
+    .broker-page {
+        .broker {
+            .banner {
+                &__title {
+                    font-size: 30px;
+                }
+            }
+            &__container {
+                gap: 20px;
+            }
+            &__nav {
+                ul {
+                    min-width: 200px;
+                }
+            }
+            .content {
+                h2 {
+                    font-size: 30px;
+                }
+                &__table {
+                    table {
+                        th {
+                            font-size: 10px;
+                            padding: 10px;
+                        }
+                        tbody {
+                            td {
+                                padding: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .broker-page {
+        .broker {
+            .content {
+                &__table {
+                    table {
+                        tbody {
+                            td {
+                                & .deposit {
+                                    gap: 5px;
+                                    span {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include middle-tablet {
+    .broker-page {
+        .broker {
+            &__nav {
+                ul {
+                    min-width: 150px;
+                }
+            }
+            .content {
+                &__table {
+                    table {
+                        th {
+                            font-size: 8px;
+                            padding: 8px;
+                            line-height: 12px;
+                        }
+                        tbody {
+                            td {
+                                padding: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .broker-page {
+        .broker {
+            .banner {
+                &__title {
+                    font-size: 24px;
+                }
+                &__logo-wrap {
+                    img {
+                        min-width: 100px;
+                    }
+                }
+            }
+            &__nav {
+                ul {
+                    position: fixed;
+                    top: 40%;
+                    left: -310px;
+                    background-color: var(--cs-light-grey);
+                    padding: 40px 20px;
+                    z-index: 1;
+                }
+
+                &-btn {
+                    display: flex;
+                }
+
+                &.active {
+                    ul {
+                        left: 0;
+                    }
+
+                    .broker__nav-btn {
+                        left: 270px;
+                    }
+                }
+            }
+            &__container {
+                gap: 0;
+            }
+            .content {
+                h2 {
+                    font-size: 24px;
+                }
+                &__table {
+                    table {
+                        tbody {
+                            td {
+                                &:first-child {
+                                    min-width: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .main-banner {
+        &__title {
+            font-size: 30px;
+        }
+    }
+    .broker-page {
+        .broker {
+            padding-top: 50px;
+            padding-bottom: 70px;
+
+            .banner {
+                margin-bottom: 30px;
+                padding: 20px 15px;
+                gap: 15px;
+
+                &__title {
+                    font-size: 20px;
+                }
+                &__text {
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
+                .btns-group {
+                    gap: 7px;
+
+                    .btn-main {
+                        max-width: 120px;
+                        padding: 12px 2px;
+                    }
+                }
+            }
+            &__container {
+                flex-direction: column;
+                gap: 0;
+            }
+            &__nav {
+                ul {
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .content {
+
+                h2 {
+                    font-size: 20px;
+                }
+                h3 {
+                    font-size: 20px;
+                }
+                &__table {
+                    overflow-x: auto;
+                    max-width: 500px;
+
+                    &::-webkit-scrollbar {
+                        width: 4px;
+                        height: 8px;
+                    }
+                    &::-webkit-scrollbar-thumb:horizontal {
+                        height: 5px;
+                        background: var(--cs-red);
+                        border-radius: 0px;
+                    }
+                    &::-webkit-scrollbar-track-piece {
+                        background: var(--cs-dark);
+                    }
+
+                    table {
+                        margin-right: 50px;
+
+                        th {
+                            padding: 12px;
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+
+                        tbody {
+                            td {
+                                padding: 12px;
+                                font-size: 14px;
+                                line-height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small-mobile {
+    .broker-page {
+        .broker {
+            .banner {
+                flex-direction: column;
+
+                &__title {
+                    font-size: 18px;
+                }
+                .btns-group {
+                    .btn-main {
+                        max-width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}

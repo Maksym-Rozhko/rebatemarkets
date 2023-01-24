@@ -590,6 +590,8 @@
 .above-footer {
     padding-top: 140px;
     padding-bottom: 142px;
+    position: relative;
+    z-index: 1;
     background: linear-gradient(270deg,#1A1A1F 25%,#0E0E13 0);
 
     &__container {
