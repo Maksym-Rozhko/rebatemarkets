@@ -1,0 +1,13 @@
+.blogs {
+    .main-banner {
+        background-image: url('../images/banners/3.jpg');
+    }
+
+    .education {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 20px;
+        }
+    }
+}

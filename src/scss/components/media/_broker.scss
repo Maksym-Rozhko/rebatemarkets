@@ -158,12 +158,12 @@
 }
 
 @include mobile {
-    .main-banner {
-        &__title {
-            font-size: 30px;
-        }
-    }
     .broker-page {
+        .main-banner {
+            &__title {
+                font-size: 30px;
+            }
+        }
         .broker {
             padding-top: 50px;
             padding-bottom: 70px;

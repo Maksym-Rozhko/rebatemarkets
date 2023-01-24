@@ -9,12 +9,12 @@
 }
 
 @include mobile {
-    .main-banner {
-        &__title {
-            font-size: 30px;
-        }
-    }
     .catalog {
+        .main-banner {
+            &__title {
+                font-size: 30px;
+            }
+        }
         .catalog-search {
             .search-controlls {
                 gap: 10px;

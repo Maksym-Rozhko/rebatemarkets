@@ -1,0 +1,45 @@
+@include small-desktop {
+    .blogs {
+        .education {
+            padding-top: 100px;
+
+            &__container {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .blogs {
+        .education {
+            padding-top: 50px;
+            padding-bottom: 70px;
+
+            &__container {
+                gap: 20px 10px;
+
+                .slide {
+                    &__content {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .blogs {
+        .main-banner {
+            &__title {
+                font-size: 30px;
+            }
+        }
+        .education {
+            &__container {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
