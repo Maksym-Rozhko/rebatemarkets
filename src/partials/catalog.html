@@ -58,7 +58,7 @@
                                 <option value="2">sort2</option>
                                 <option value="3">sort3</option>
                             </select>
-                            <button class="btn-reset btn-main btn-main--red" type="button">Filter</button>
+                            <button class="btn-reset btn-main btn-main--red" type="button" data-graph-path="filter">Filter</button>
                         </div>
                     </div>
                     <div class="tabs__content">
@@ -373,4 +373,34 @@
             </div>
         </div>
     </section>
+</div>
+
+<div class="graph-modal filter">
+  <div class="graph-modal__container filter__container" role="dialog" aria-modal="true" data-graph-target="filter">
+    <button class="btn-reset graph-modal__close" aria-label="Close modal">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1L1 13" stroke="#D5D5D5" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 1L13 13" stroke="#D5D5D5" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </button>
+    <div class="graph-modal__content filter__content">
+        <h2 class="title title--lines">
+            Filter
+        </h2>
+        <div class="filter__content-fields">
+            <label>
+                <input type="text" placeholder="Minimum deposit">
+            </label>
+            <label>
+                <input type="text" placeholder="Minimum deposit2">
+            </label>
+            <label>
+                <input type="text" placeholder="Minimum deposit3">
+            </label>
+        </div>
+        <a href="#">
+            Found an error ?
+        </a>
+    </div>
+  </div>
 </div>

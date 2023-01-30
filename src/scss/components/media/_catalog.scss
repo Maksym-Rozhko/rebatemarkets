@@ -6,6 +6,16 @@
             }
         }
     }
+    .filter {
+        &__container {
+            padding: 30px 25px;
+        }
+        &__content {
+            &-fields {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
 }
 
 @include mobile {
@@ -24,6 +34,13 @@
                 .btn-main {
                     max-width: inherit;
                 }
+            }
+        }
+    }
+    .filter {
+        &__content {
+            &-fields {
+                grid-template-columns: 1fr;
             }
         }
     }

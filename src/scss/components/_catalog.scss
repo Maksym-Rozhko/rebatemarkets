@@ -81,3 +81,103 @@
         }
     }
 }
+
+.filter {
+    &__container {
+        padding: 60px 50px;
+        background: var(--white);
+        box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+
+    .graph-modal__close {
+        right: 20px;
+        top: 20px;
+    }
+
+    &__content {
+        .title {
+            @include title;
+            font-size: 28px;
+            margin-bottom: 20px;
+
+            &--lines {
+                @include lines;
+                padding-bottom: 5px;
+
+                &::after {
+                    max-width: 80px;
+                }
+            }
+        }
+
+        &-fields {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 20px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #F5F5F5;
+
+            input {
+                background: #F8F8F8;
+                border-radius: 4px;
+                border: none;
+                padding: 17px 20px;
+                width: 100%;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 100%;
+                color: var(--cs-dark-text);
+                outline-color: var(--cs-red);
+
+                &::-webkit-search-cancel-button {
+                    cursor: pointer;
+                }
+
+                &::placeholder {
+                    color: var(--cs-dark-text);
+                }
+            }
+
+            select {
+                background-color: #F8F8F8;
+                border-radius: 4px;
+                border: none;
+                padding: 17px 20px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 100%;
+                color: var(--cs-dark-text);
+                max-width: 260px;
+                width: 100%;
+                appearance: none;
+                background-image: url('../images/icon/select-arrow.svg');
+                background-repeat: no-repeat;
+                background-position: center right 20px;
+                background-size: auto;
+                outline-color: var(--cs-red);
+                cursor: pointer;
+            }
+        }
+
+        a {
+            display: block;
+            max-width: fit-content;
+            font-family: 'Muller', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 100%;
+            color: var(--cs-dark-text);
+            padding-bottom: 1px;
+            border-bottom: 1px solid var(--cs-dark-text);
+            margin-left: auto;
+            transition: all ease-in-out .4s;
+
+            &:hover {
+                color: var(--cs-red);
+                border-bottom: 1px solid var(--cs-red);
+            }
+        }
+    }
+}

@@ -31,4 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         smoothScrollToElems('.broker .broker__nav a');
     }
+
 });

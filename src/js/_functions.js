@@ -30,8 +30,18 @@ import { disableScroll } from './functions/disable-scroll';
 import { enableScroll } from './functions/disable-scroll';
 
 // Реализация модального окна
-// import GraphModal from 'graph-modal';
-// const modal = new GraphModal();
+import GraphModal from 'graph-modal';
+const modal = new GraphModal();
+
+const closeModal = document.querySelectorAll('.graph-modal__close');
+
+if (closeModal) {
+    closeModal.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.close();
+        });
+    });
+}
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
