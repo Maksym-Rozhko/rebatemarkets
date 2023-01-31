@@ -1,6 +1,6 @@
 import GraphTabs from 'graph-tabs';
-const tabsBrokersParent = document.querySelector('.brokers .tabs');
+const tabs = document.querySelector('.tabs');
 
-if (tabsBrokersParent) {
-    new GraphTabs(tabsBrokersParent.dataset.tabs);
+if (tabs) {
+    new GraphTabs(tabs.dataset.tabs);
 }

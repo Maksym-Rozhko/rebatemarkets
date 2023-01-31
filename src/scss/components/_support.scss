@@ -1,0 +1,204 @@
+.support-page {
+    .main-banner {
+        background-image: url('../images/banners/5.jpg');
+    }
+
+    .support {
+        background-color: #F8F8F8;
+        padding-top: 76px;
+        padding-bottom: 120px;
+
+        &__container {
+            max-width: 1356px;
+            margin: 0 auto;
+        }
+
+        .tabs {
+            &__nav {
+                margin-bottom: 50px;
+                gap: 55px;
+            }
+
+            &__nav-btn {
+                font-size: 28px;
+                padding-right: 40px;
+
+                &::after {
+                    max-width: 82px;
+                }
+            }
+        }
+
+        .contacts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+
+            &__info,
+            &__form {
+                padding: 80px 60px;
+                background: var(--white);
+                border-radius: 4px;
+            }
+
+            &__subtitle {
+                @include subtitle;
+            }
+
+            &__title {
+                @include title;
+                font-size: 28px;
+            }
+
+            .info {
+                &__body {
+                    margin-top: 85px;
+                    margin-bottom: 72px;
+                }
+
+                &__link,
+                &__schedule {
+                    display: block;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                    color: #0E0E13;
+                }
+
+                &__link {
+                    padding-bottom: 13px;
+                    margin-bottom: 20px;
+                    border-bottom: 1px solid #ECECEC;
+                }
+
+                &__schedule {
+                    span {
+                        color: var(--cs-dark-text);
+                    }
+                }
+
+                &__link-group {
+                    display: flex;
+                    gap: 20px;
+
+                    .btn-main {
+                        @include btn-main;
+                        @include flex-all-center;
+                        max-width: 192px;
+                        font-size: 12px;
+                        line-height: 15px;
+                        padding: 16px;
+
+                        &--red-outline {
+                            @include btn-red-outline;
+                            color: var(--cs-red);
+
+                            &:hover {
+                                color: var(--white);
+                                z-index: 11;
+                                -webkit-text-fill-color: white;
+                            }
+                        }
+
+                        &--blue-outline {
+                            border: 1px solid #30A6FB;
+                            background-color: transparent;
+                            transition: all .4s cubic-bezier(0.42, 0, 0.58, 1);
+                            color: #30A6FB;
+                            gap: 8px;
+                            max-width: 147px;
+                            position: relative;
+
+                            svg {
+                                color: #03A9F4;
+                                transition: all .4s cubic-bezier(0.42, 0, 0.58, 1);
+                            }
+
+                            &:hover {
+                                text-shadow: nthree;
+                                color: var(--white);
+                                z-index: 11;
+                                -webkit-text-fill-color: var(--white);
+
+                                svg {
+                                    color: var(--white);
+                                }
+                            }
+
+                            &:hover::before {
+                                left: 0%;
+                                right: auto;
+                                width: 100%;
+                                transition: all .4s cubic-bezier(0.42, 0, 0.58, 1);
+                            }
+
+                            &::before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 0px;
+                                right: 0px;
+                                height: 100%;
+                                border-radius: 4px;
+                                width: 0px;
+                                z-index: -1;
+                                background: #30A6FB;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form {
+                margin-top: 40px;
+
+                &__right {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                }
+
+                &__control {
+                    background: #F8F8F8;
+                    border-radius: 4px;
+                    padding: 17px 20px;
+                    font-family: 'Muller', sans-serif;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 100%;
+                    border: none;
+                    outline-color: var(--cs-red);
+                    margin-bottom: 10px;
+                    color: var(--cs-dark);
+
+                    &::placeholder {
+                        color: var(--cs-dark-text)
+                    };
+                }
+
+                textarea {
+                    min-height: 130px;
+                    resize: none;
+                }
+
+                .btn-main {
+                    @include btn-main;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: 17px;
+                    max-width: 200px;
+                    margin-top: 40px;
+
+                    &--red {
+                        @include btn-red;
+                    }
+                }
+            }
+        }
+    }
+}
