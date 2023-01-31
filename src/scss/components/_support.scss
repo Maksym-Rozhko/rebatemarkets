@@ -13,21 +13,21 @@
             margin: 0 auto;
         }
 
-        .tabs {
-            &__nav {
-                margin-bottom: 50px;
-                gap: 55px;
-            }
+        // .tabs {
+        //     &__nav {
+        //         margin-bottom: 50px;
+        //         gap: 55px;
+        //     }
 
-            &__nav-btn {
-                font-size: 28px;
-                padding-right: 40px;
+        //     &__nav-btn {
+        //         font-size: 28px;
+        //         padding-right: 40px;
 
-                &::after {
-                    max-width: 82px;
-                }
-            }
-        }
+        //         &::after {
+        //             max-width: 82px;
+        //         }
+        //     }
+        // }
 
         .contacts {
             display: grid;

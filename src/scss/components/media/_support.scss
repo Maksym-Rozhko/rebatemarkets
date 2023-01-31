@@ -19,19 +19,19 @@
             padding-top: 60px;
             padding-bottom: 60px;
 
-            .tabs {
-                &__nav {
-                    gap: 25px;
-                }
+            // .tabs {
+            //     &__nav {
+            //         gap: 25px;
+            //     }
 
-                &__nav-btn {
-                    font-size: 24px;
+            //     &__nav-btn {
+            //         font-size: 24px;
 
-                    &::after {
-                        max-width: 60px;
-                    }
-                }
-            }
+            //         &::after {
+            //             max-width: 60px;
+            //         }
+            //     }
+            // }
             .contacts {
                 grid-template-columns: 1fr;
             }
