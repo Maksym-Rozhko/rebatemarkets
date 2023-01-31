@@ -160,24 +160,5 @@
                 cursor: pointer;
             }
         }
-
-        a {
-            display: block;
-            max-width: fit-content;
-            font-family: 'Muller', sans-serif;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 100%;
-            color: var(--cs-dark-text);
-            padding-bottom: 1px;
-            border-bottom: 1px solid var(--cs-dark-text);
-            margin-left: auto;
-            transition: all ease-in-out .4s;
-
-            &:hover {
-                color: var(--cs-red);
-                border-bottom: 1px solid var(--cs-red);
-            }
-        }
     }
 }
