@@ -6,14 +6,38 @@
 <body>
     @include('partials/header.html')
     <main class="main">
-        @include('partials/support.html')
+        @include('partials/home.html')
     </main>
     @include('partials/footer.html')
-	<butto type="button" class="scroll-top d-none">
+	<button type="button" class="scroll-top d-none">
 		<svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M16 9L8.5 1.5L1 9" stroke="#71717A" stroke-width="2" stroke-linecap="round"/>
 		</svg>
-	</butto>
+	</button>
 </body>
-
+<div class="graph-modal registration">
+    <div class="graph-modal__container filter__container" role="dialog" aria-modal="true" data-graph-target="registr">
+      <button class="btn-reset graph-modal__close" aria-label="Close modal">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 1L1 13" stroke="#D5D5D5" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 1L13 13" stroke="#D5D5D5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+      </button>
+      <div class="graph-modal__content filter__content">
+          <h2 class="title title--lines">
+            Apply for registration
+          </h2>
+          <div class="registration__form">
+            <form action="#" class="form">
+                <label>
+                    <input type="email" name="email" placeholder="Enter your e-mail">
+                </label>
+                <button type="submit" class="btn-reset btn-main btn-main--red">
+                    register
+                </button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>

@@ -733,3 +733,15 @@
         }
     }
 }
+
+.graph-modal.registration .graph-modal__container {
+    background: #F8F8F8;
+}
+
+.graph-modal.registration .graph-modal__content .title--lines {
+    padding-bottom: 20px;
+}
+
+.graph-modal.registration .registration__form {
+    max-width: inherit;
+}
